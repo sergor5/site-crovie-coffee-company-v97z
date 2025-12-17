@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visit Crovie Coffee Company in Tepebaşı, Eskişehir for exceptional artisan coffee, delicious pastries, and a cozy atmosphere. Rated 4.8 stars by locals.">
+  <meta name="keywords" content="coffee eskişehir, crovie coffee company, cafe tepebaşı, best coffee shop turkey, specialty coffee">
+  <title>Crovie Coffee Company | Top Rated Cafe in Eskişehir</title>
+  <style>
+:root {
+    --primary: #3E2723;
+    --secondary: #D7CCC8;
+    --accent: #C68E17;
+    --text-dark: #212121;
+    --text-light: #757575;
+    --white: #ffffff;
+    --bg-light: #F5F5F5;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.sub-heading {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(62, 39, 35, 0.8));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* About */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.col-img, .col-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.shadow-img {
+    border-radius: 8px;
+    box-shadow: 20px 20px 0px var(--secondary);
+}
+
+.feature-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list i {
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+/* Offerings */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* Reviews */
+.review-box {
+    background: var(--primary);
+    color: var(--white);
+    padding: 60px;
+    border-radius: 8px;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235d4037' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.review-box h2 {
+    color: var(--white);
+    margin: 15px 0;
+}
+
+.stars {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info .item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.contact-info i {
+    background: var(--secondary);
+    color: var(--primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.col-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: #999;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+}
+
+/* Animations */
+.reveal-left, .reveal-right, .reveal-up, .fade-in {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.reveal-left {
+    transform: translateX(-50px);
+}
+
+.reveal-right {
+    transform: translateX(50px);
+}
+
+.reveal-up {
+    transform: translateY(50px);
+}
+
+.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        top: 70px;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+}
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crovie Coffee Company in Eskişehir. Experience artisan coffee, a cozy atmosphere, and top-rated service in Tepebaşı. Rated 4.8 stars.">
+    <title>Crovie Coffee Company | Best Coffee in Eskişehir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Crovie Coffee.</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#offerings" class="nav-link">Menu</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link btn-nav">Visit Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <h1>Experience the Perfect Brew in Tepebaşı</h1>
+            <p>Artisan coffee, cozy vibes, and the best beans in Eskişehir.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Find Us</a>
+                <a href="#offerings" class="btn btn-outline">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-img reveal-left">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Barista pouring coffee" class="responsive-img shadow-img">
+                    </div>
+                </div>
+                <div class="col-text reveal-right">
+                    <h4 class="sub-heading">Our Story</h4>
+                    <h2>More Than Just Coffee</h2>
+                    <p>Located in the heart of Şirintepe, Crovie Coffee Company is dedicated to the art of brewing. We believe that a cup of coffee is more than just a caffeine kick—it's a moment of pause, a conversation starter, and a daily ritual.</p>
+                    <p>With a 4.8-star rating from our beloved community, we strive to create a warm, inviting space where modern design meets traditional hospitality.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Premium Roasted Beans</li>
+                        <li><i class="fas fa-check-circle"></i> Expert Baristas</li>
+                        <li><i class="fas fa-check-circle"></i> Relaxing Atmosphere</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offerings / Menu Highlight -->
+    <section id="offerings" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h4 class="sub-heading">What We Pour</h4>
+                <h2>Our Specialties</h2>
+                <p class="header-desc">Crafted with passion, served with love.</p>
+            </div>
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <div class="card reveal-up">
+                    <div class="card-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Signature Espresso</h3>
+                    <p>Rich, bold, and perfectly extracted. The foundation of all our great drinks.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card reveal-up delay-100">
+                    <div class="card-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h3>Cold Brews</h3>
+                    <p>Slow-steeped for 12 hours for a smooth, less acidic, and refreshing finish.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card reveal-up delay-200">
+                    <div class="card-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3>Fresh Pastries</h3>
+                    <p>Daily baked goods that pair perfectly with your favorite roast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Social Proof -->
+    <section id="reviews" class="section-padding">
+        <div class="container">
+            <div class="review-box text-center">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <h2>"Exceptional Quality"</h2>
+                <p>We are proud to hold a <strong>4.8 Rating</strong> across 33 reviews. Thank you to our amazing customers in Eskişehir for making us your daily stop.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-text">
+                    <h2>Visit Crovie Coffee</h2>
+                    <p>Come taste the difference. We are located centrally in Tepebaşı.</p>
+                    
+                    <div class="contact-info">
+                        <div class="item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Şirintepe, İsmet İnönü-2 Blv No:32/A,<br>26000 Tepebaşı/Eskişehir, Türkiye</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Opening Hours</h5>
+                                <p>Mon - Sun: 09:00 - 23:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-map">
+                    <!-- Placeholder for Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.425316374026!2d30.5038!3d39.7817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc161c1c1c1c1c%3A0x1c1c1c1c1c1c1c1c!2s%C5%9Eirintepe%2C%20%C4%B0smet%20%C4%B0n%C3%B6n%C3%BC-2%20Blv%20No%3A32%2FA%2C%2026000%20Tepeba%C5%9F%C4%B1%2FEski%C5%9Fehir!5e0!3m2!1sen!2str!4v1620000000000!5m2!1sen!2str" 
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Google Map showing location of Crovie Coffee Company"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Crovie Coffee Company. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navList.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-active');
+        navList.classList.remove('active');
+    }));
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .fade-in');
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 150;
+
+        revealElements.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add('active');
+            }
+        });
+    };
+
+    // Trigger once on load then on scroll
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Navbar background change on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+        } else {
+            navbar.style.boxShadow = "none";
+        }
+    });
+});
+  </script>
+</body>
+</html>
